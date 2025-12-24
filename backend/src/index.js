@@ -9,11 +9,12 @@ import habitRoutes from "../src/routes/habitRoute.js"
 
 const app = express();
 connectDb()
-app.use(cors({
-  origin: "https://habit-tracker-cyan-five.vercel.app", 
-  allowedHeaders: ["Content-Type", "Authorization"], 
-  credentials: true
-}));
+// app.use(cors({
+//   origin: "https://habit-tracker-cyan-five.vercel.app", 
+//   allowedHeaders: ["Content-Type", "Authorization"], 
+//   credentials: true
+// }));
+app.use(cors())
 app.use(express.json());
 
 // routes
